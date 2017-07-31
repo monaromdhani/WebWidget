@@ -22,7 +22,7 @@
 
 </head>
 
-<body ng-app="shopApp" ng-controller="MainCtrl">
+<body ng-app="chartApp" ng-controller="MainCtrl">
 
 <section class="wrapper">
     <div class="container">
@@ -37,15 +37,15 @@
                                 	<img src="img/user.png" srcset="img/user@2x.png 2x" alt="" />
                                 </figure>
                                 <div class="box-user">
-                                    <h3 class="name">Andrée Afonso</h3>
-                                    <a href="javascript:void(0);" class="switch">Switch profile</a>
+                                    <h3 class="name">{{ User.profile.firstName }} {{ User.profile.lastName }}</h3><!-- Andrée Afonso -->
+                                    <a href="{{ switchUrl }}" class="switch" target="_blank">Switch profile</a>
                                 </div>
                                 <div class="box-follow">
-                                    <h4>150</h4>
+                                    <h4>{{ User.profile.following }}</h4>
                                     <span>following</span>
                                 </div>
                                 <div class="box-follow">
-                                    <h4>324</h4>
+                                    <h4>{{ User.profile.followers }}</h4>
                                     <span>followers</span>
                                 </div>
                             </div>
